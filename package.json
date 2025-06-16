@@ -1,5 +1,6 @@
 {
   "name": "humanizer-ai-3d",
+  "homepage": " https://vishnujaisri123.github.io/Humanize-Ai/",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -8,7 +9,9 @@
     "server": "nodemon server/index.js",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "caniuse-lite": "^1.0.30001722",
@@ -17,6 +20,7 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "framer-motion": "^10.16.16",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.344.0",
     "openai": "^4.20.1",
     "react": "^18.3.1",
