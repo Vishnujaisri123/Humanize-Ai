@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: humanizer-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+    rootDir: server

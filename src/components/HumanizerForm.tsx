@@ -12,7 +12,7 @@ const HumanizerForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/humanize", {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/humanize`, {
         text: input,
       });
 
@@ -23,6 +23,11 @@ const HumanizerForm = () => {
       });
     } catch (error) {
       console.error("Error fetching humanized data:", error);
+      setTextData({
+        humanized: "[Error processing request]",
+        confidence: "",
+        changes: "",
+      });
     }
   };
 
